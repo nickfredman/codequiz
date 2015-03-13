@@ -1,0 +1,17 @@
+app:
+  build: .
+  # image: meteorhacks/meteord
+  environment:
+    BIND_IP:   0.0.0.0
+    MONGO_URL: mongodb://mongo:27017/db
+  links:
+    - mongo
+  ports:
+    - "8080:8080"
+  volumes:
+    - .:/app
+
+mongo:
+  image: mongo:latest
+  ports:
+    - "27017"
