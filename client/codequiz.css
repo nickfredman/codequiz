@@ -1,0 +1,283 @@
+/* CSS declarations go here */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #666;
+    font-family: 'lato' sans-serif;
+    font-size: 18px;
+}
+
+.footer-main {
+    margin-bottom: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.main-title {
+    color: #555;
+    font-size: 5rem;
+    margin-bottom: 50px;
+}
+
+.title-blue {
+    color: #31B0D5;
+}
+
+.signup-text {
+    color: #31B0D5;
+}
+
+.signup-form {
+  text-align: left;
+}
+
+.signup-form label {
+  margin-left: 20px;
+  width: 120px;
+}
+
+.signup-form div {
+    display: inline-block;
+}
+
+.signup-button {
+  text-align: right;
+  margin-top: 40px;
+  height: 40px
+}
+
+.modal-body .signup-button a {
+    margin-left: 30px;
+    width: 90%;
+    height: 40px;
+}
+
+
+.shim {
+    margin-bottom: 30px;
+}
+
+.underline {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.signup-btn-block {
+    margin-top: 30px;
+}
+
+.signup-btn-body {
+    width: 75%;
+}
+
+.mini-text a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.top-content {
+    margin-bottom: 60px;
+}
+
+.learn-more {
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+
+.learning {
+    margin-top: 10px;
+}
+
+.footer {
+    color: #aaa;
+    margin-bottom: 0;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.footer-nav {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-nav li {
+    display: inline-block;
+    float: none;
+}
+
+        /*Demo Styling*/
+
+.placeholder-body {
+    height: 800px;
+}
+
+.lang-box {
+    height: 80px;
+    width: 100%;
+    background: #999;
+    border-radius: 5px;
+    border: none;
+    border-left: 8px solid #31B0D5;
+    margin-bottom: 20px;
+    line-height: 80px;
+    color: #fff;
+    box-shadow: 2px 2px 3px #aaa;
+    transition: all 0.5s;
+}
+
+.lang-box:hover {
+    background: #888;
+    box-shadow: 2px 2px 3px #3BD3FF;
+}
+
+.lang-box > p {
+    display: inline-block;
+}
+
+.lang-box > div {
+     display: inline-block;
+}
+
+.language {
+    text-align: left;
+    font-size: 2.75rem;
+    width: 25%;
+    padding-left: 5px;
+    float: left;
+}
+
+.easy-comp span {
+    color: #3AFF6E;
+}
+
+.med-comp span {
+    color: #E8CD29;
+}
+
+.hard-comp span {
+    color: #E0471B;
+}
+
+.question-box span {
+    text-shadow: 1px 1px #777;
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 1.7rem;
+}
+
+.question-box {
+    float: right;
+    padding-top: 5px;
+}
+
+.question-box > p {
+    display: block;
+    text-align: right;
+    font-size: 1.5rem;
+    padding-right: 10px;
+    width: 100%;
+    line-height: 1.5rem;
+}
+
+        /*MODAL STYLES*/
+
+
+.modal {
+    top: 30%;
+    text-align: center;
+}
+
+.modal h4 {
+    font-size: 2.5rem;
+}
+
+.modal-body a {
+    width: 25%;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+        /*QUIZ STYLES*/
+
+.lang {
+    border-bottom: 1px solid #E7E7E7;
+    padding-bottom: 20px;
+}
+
+.lang span {
+    color: #3AFF6E;
+}
+
+.questionnaire {
+    margin-top: 30px;
+    overflow: hidden;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+
+.question-num {
+    margin-right: 10%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.mc-question-text {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.mc-question-answers button {
+    width: 45%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.fitb-question-text {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.fitb-question-answer label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.form-inline button {
+    margin-left: 10px;
+}
+
+.modal-content {
+    overflow: hidden;
+}
+
+.next {
+    margin-bottom: 0;
+}
+
+.quiz-modal-title h4 {
+    font-size: 5rem;
+    color: #555;
+}
+
+.modal-body .btn-good {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.modal-body .btn-bad {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}

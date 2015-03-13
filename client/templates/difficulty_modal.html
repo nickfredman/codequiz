@@ -1,0 +1,22 @@
+<!-- Optional Difficulty Modal, likely won't need -->
+<!-- Modal -->
+<template name="diffModal">
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Choose Your Difficulty</h4>
+        </div>
+        <div class="modal-body">
+          <a type="button" class="btn btn-success btn-lg easy-mode" value="easy" href="quiz.html"><span>Easy</span>
+          </a>
+          <a type="button" class="btn btn-warning btn-lg medium-mode" value="medium" href="quiz.html"><span>Medium</span>
+          </a>
+          <a type="button" class="btn btn-danger btn-lg hard-mode" value="hard" href="quiz.html"><span>Hard</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
