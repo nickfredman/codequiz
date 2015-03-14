@@ -1,4 +1,4 @@
-Template.languageContent.helpers({
+Template.languages.helpers({
   languages: function() {
     return Languages.find({});
   },
