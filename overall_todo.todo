@@ -4,7 +4,10 @@ General Task List:
   ☐ Link pages' templates
   ☐ Create template helpers
   ✔ Create user auth @done (15-03-13 14:56)
-  ☐ Add auth functionality
+  ✔ Add auth functionality @done (15-03-13 22:25)
+  ☐ Make homepage content dynamic based on user login state
+    ☐ Unauthenticated user sees default/sales/intro page
+    ☐ Authenticated user automatically redirects to language
   ☐ Create routes
   ☐ Create database for questions to pull
     ☐ Add 10 more easy questions
@@ -13,6 +16,7 @@ General Task List:
   ☐ Redo Quiz page with new layout & functionality
   ☐ Update SCSS
   ☐ Insert payment based features
+  ☐ Add 404 page with crazy animations and questions dropping out of the sky and javascript matrix
 
 Pages to create:
   ✔ Pricing Page @done (15-03-13 14:04)
@@ -22,7 +26,11 @@ Pages to create:
   ☐ Update Quiz Page
   ☐ Update Languages Page
   ☐ Format Terms/Privacy Pages
+  ☐ Update landing page
 
-templates/home
-templates/user
-templates/quiz
+2 Main Questsions:
+  ☐ Choose square vs. paypal vs google payments vs gumroad vs stripe
+  ✔ Choose content available to free vs paid users @done (15-03-13 22:44)
+    ☐ 1) give free, unsigned up users one quiz
+    ☐ 2) prompt users to create an account before any access
+    ☐ 3) prompt users to pay before any access (but give free 14 days)
