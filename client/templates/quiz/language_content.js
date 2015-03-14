@@ -1,6 +1,10 @@
 Template.languageContent.helpers({
   languages: function() {
-    console.log(Languages.find({}));
     return Languages.find({});
+  },
+
+  upcomingLanguages: function() {
+    var data = [{name: "Underscore"}, {name: "Ruby"}, {name: "Rails"}]
+    return data;
   }
 });
