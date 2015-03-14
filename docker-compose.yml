@@ -2,8 +2,9 @@ app:
   build: .
   # image: meteorhacks/meteord
   environment:
-    BIND_IP:   0.0.0.0
+    BIND_IP: 0.0.0.0
     MONGO_URL: mongodb://mongo:27017/db
+    MONGO_OPLOG_URL: mongodb://mongo:27017/local
   links:
     - mongo
   ports:
