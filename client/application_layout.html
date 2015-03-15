@@ -1,12 +1,11 @@
 <template name="applicationLayout">
-  <head>
-    <title>CodeQuiz</title>
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic" rel="stylesheet" type="text/css">
-  </head>
+  <title>CodeQuiz</title>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic" rel="stylesheet" type="text/css">
 
-  <body>
   {{> header}}
   {{> yield}}
   {{> footer}}
-  </body>
+
 </template>
+
+<!-- We need to find a way to add things into head, I looked it up and couldn't find a solution. When we add a head or body tag it doubles them causing weird stuff to happen -->
