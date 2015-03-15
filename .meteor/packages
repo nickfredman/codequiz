@@ -13,3 +13,6 @@ underscore
 twbs:bootstrap
 ian:accounts-ui-bootstrap-3
 bootstrap
+iron:router
+accounts-password
+msavin:mongol

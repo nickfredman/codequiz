@@ -1,0 +1,15 @@
+<template name="languages">
+  <div class="row main-content">
+    <div class="col-md-12">
+      <h1 class="text-center main-title shim">Choose Your Language</h1>
+    </div>
+    {{#each languages}}
+      {{> languageCard}}
+    {{/each}}
+
+    <h2>Coming Soon</h2>
+    {{#each upcomingLanguages}}
+      {{> upcomingLanguageCard}}
+    {{/each}}
+  </div>
+</template>
