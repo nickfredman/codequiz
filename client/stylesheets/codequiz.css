@@ -115,6 +115,7 @@ body {
     float: none;
 }
 
+
         /*Demo Styling*/
 
 .placeholder-body {
@@ -123,7 +124,8 @@ body {
 
 .lang-box {
     height: 80px;
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
     background: #999;
     border-radius: 5px;
     border: none;
