@@ -1,0 +1,22 @@
+<template name="quiz">
+  <div class="container">
+    <div class="row">
+      <div class="title">
+        <h1 class="lang diff main-title text-center">JavaScript: <span><em>Easy</em></span></h1>
+      </div>
+      {{> currentQuestion}}
+    </div>
+  </div>
+</template>
+
+<template name="currentQuestion">
+  <div class="well questionnaire">
+    <div class="questionText">
+      <p class="question">{{{question.text}}}
+      </p>
+    </div>
+  </div>
+</template>
+
+<!--     <div class="question-num pull-right">
+      <p id="question-number"></p> -->
