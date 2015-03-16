@@ -31,6 +31,19 @@ Pages to create:
 2 Main Questsions:
   ☐ Choose square vs. paypal vs google payments vs gumroad vs stripe
   ✔ Choose content available to free vs paid users @done (15-03-13 22:44)
-    ☐ 1) give free, unsigned up users one quiz
+    ✔ 1) give free, unsigned up users one quiz @done (15-03-15 14:30)
     ☐ 2) prompt users to create an account before any access
     ☐ 3) prompt users to pay before any access (but give free 14 days)
+
+Biggest things to work on:
+ ☐ Quiz functionality
+ ☐ Homepage styleing
+ ☐ Languages Styling
+ ☐ Quiz Styling
+ ☐ Account page styling
+ ☐ Billing/payments styling
+ ☐ Billing/payments functionality
+ ☐ Deploy Site
+ ☐ User state changes
+ ☐ Add error page & style it
+ ☐ Purchase URL
