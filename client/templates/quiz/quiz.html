@@ -10,10 +10,7 @@
         <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 40%">Incorrect: 4
         </div>
       </div>
-
-<!--       {{#for quiz}} -->
       {{> currentQuestion}}
-<!--       {{/for}} -->
     </div>
   </div>
 </template>
@@ -21,25 +18,24 @@
 <template name="currentQuestion">
   <div class="well questionnaire">
     <div class="questionText">
-      <!-- Hard Coded for styling purposes -->
       <div class="current-question-mc col-md-6 col-md-offset-3">
         <div class="mc-question-text text-center">
-          <p>Which method returns the specified character from a string?</p>
+          <p>{{{ question.text }}}</p>
         </div>
-        <div class="mc-question-answers text-center">
-          <button id="answer1" class="mc-btn btn btn-lg btn-info">bind</button>
-          <button id="answer2" class="mc-btn btn btn-lg btn-info">concat</button>
-          <button id="answer3" class="mc-btn btn btn-lg btn-info">charAt</button>
-          <button id="answer4" class="mc-btn btn btn-lg btn-info">slice</button>
-        </div>
+        {{#if question.isMultipleChoice }}
+          {{> mcQuestion answers=question.possibleAnswers }}
+        {{else}}
+          {{> fitbQuestion}}
+        {{/if}}
       </div>
-      <!-- {#if fitb question}}
-      {{> fitb_question}} And pull in the relevant question data to that template --><!-- <p class="question">{{{question.text}}}
-      {{/if}}
-      {{#if mc question}}
-      {{> mc_question}}
-      {{/if}}
-      </p>
-    --></div>
+    </div>
+  </div>
+</template>
+
+<template name="mcQuestion">
+  <div class="mc-question-answers text-center">
+    {{#each answers }}
+      <button value="{{this}}" class="submit mc-btn btn btn-lg btn-info">{{ this }}</button>
+    {{/each}}
   </div>
 </template>

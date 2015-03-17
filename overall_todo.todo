@@ -47,3 +47,25 @@ Biggest things to work on:
  ☐ User state changes
  ☐ Add error page & style it
  ☐ Purchase URL
+
+Quiz:
+ ☐ Implement remaining functionality
+   ☐ add wrong answer to array
+   ☐ store wrong answers on user
+   ☐ display notification for answer result
+   ☐ make the score dynamic in the progress bar
+   ☐ implement remaining questions functionality
+   ☐ make language and level dynamic
+   ☐ persist session state for the user when they sign up/sign in
+   ☐ add completion screen
+  # scary
+   ☐ if user isn't signed in and they finish the demo quiz they should be prompted to sign upif user isn't signed in and they finish the demo quiz they should be prompted to sign upif user isn't signed in and they finish the demo quiz they should be prompted to sign upif user isn't signed in and they finish the demo quiz they should be prompted to sign up
+
+   ☐ show level of quizzes that a user has completed
+   ☐ know whether they're paid or not, and give access accordingly
+  # /scary
+
+User:
+  ☐ sign up for payments
+  ☐ make/cancel payments
+  ☐ create account page
