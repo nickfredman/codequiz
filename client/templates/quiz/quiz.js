@@ -25,62 +25,25 @@ Template.quiz.helpers({
 
   hasIncorrectAnswers: function() {
     return Session.get("numberIncorrect") > 0;
+  },
+
+  totalQuestions: function() {
+    return Session.get("totalQuizQuestions");
   }
 });
 
-Template.currentQuestion.helpers({
-  question: function() {
-    console.log(Quiz.getQuestion());
-    return Quiz.getQuestion();
-  },
-
-  currentPosition: function() {
-    return Quiz.currentPosition();
-  }
-  // currentQuestionNumber: function() {
-  //   return (Quiz.questionIndex() + " / " + Quiz.totalQuestions());
-  // }
-
-});
-
-Template.currentQuestion.events({
-  "click .submit": function(e) {
-    e.preventDefault();
-    var response = e.target.value;
-    var result = Quiz.isCorrect(response);
-    if(result) {
-      $('.correct-flash').fadeTo(1500, 1).fadeTo(1500, 0);
-    } else if(result === false){
-      $('.incorrect-flash').fadeTo(1500, 1).fadeTo(1500, 0);
-    }
-    Quiz.incrementQuestion();
-
-
-    return Quiz.incrementCorrect(result);
-  },
-
-  "submit .fitb-form": function(e) {
-    e.preventDefault();
-    var response = $('#fitb-answer').val().trim();
-    var result = Quiz.isCorrect(response);
-    if(result) {
-      $('.correct-flash').fadeTo(1500, 1).fadeTo(1500, 0);
-    } else if(result === false){
-      $('.incorrect-flash').fadeTo(1500, 1).fadeTo(1500, 0);
-    }
-    Quiz.incrementQuestion();
-
-    return Quiz.incrementCorrect(result);
-  },
-
-  "click #login-buttons-logout": function(e) {
+Template.quiz.events({
+  "click #nextQuiz": function(e) {
     e.preventDefault();
     Router.go('/languages');
+  },
+
+  "click #retake": function(e) {
+    e.preventDefault();
+    console.log('it worked');
+    Quiz.getQuiz();
+    $('#final-modal').modal('hide');
+    Router.render('/quiz');
   }
 });
 
-//  1) get an array of 10 question objects at random from main quiz collection
-//  2) ->> currentQuestion
-//  3) # in the array
-//  4) correctAnswers ++
-//  5) Incorrect = wrongAnswers.push(currentQuestion)
