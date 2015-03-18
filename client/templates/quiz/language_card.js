@@ -1,6 +1,14 @@
+
 Template.languageCard.events({
-  "click .level-button": function(e){
+  // "click .level-button": function(e){
+  //   e.preventDefault();
+  //   selectQuizButton = e.currentTarget;
+
+  //   Router.go("/quiz");
+  // }
+  "click button": function(e) {
     e.preventDefault();
+
     selectQuizButton = e.currentTarget;
     languageAndLevel = $(selectQuizButton).val().split(' ');
     Session.set("language", languageAndLevel[0]);
@@ -13,6 +21,19 @@ Template.languageCard.events({
     } else if(Session.get("level") === "3") {
       Session.set("totalQuizQuestions", 20);
     }
-    Router.go("/quiz");
+
+    if(Session.get("level") == "1") {
+      Router.go("/quiz");
+    } else {
+      if (Meteor.user()) {
+        Router.go("/quiz");
+      }
+    }
+  },
+
+  "mouseenter .needs-login": function() {
+    if(!Meteor.user()) {
+      $('[data-toggle="tooltip"]').tooltip();
+    }
   }
 });

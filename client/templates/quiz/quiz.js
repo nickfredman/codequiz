@@ -33,9 +33,12 @@ Template.currentQuestion.helpers({
     return Quiz.getQuestion();
   },
 
-  currentQuestionNumber: function() {
-    return (Quiz.questionIndex() + " / " + Quiz.totalQuestions());
+  currentPosition: function() {
+    return Quiz.currentPosition();
   }
+  // currentQuestionNumber: function() {
+  //   return (Quiz.questionIndex() + " / " + Quiz.totalQuestions());
+  // }
 
 });
 
@@ -49,10 +52,8 @@ Template.currentQuestion.events({
     } else if(result === false){
       $('.incorrect-flash').fadeTo(1500, 1).fadeTo(1500, 0);
     }
-    // console.log(result);
-    Quiz.incrementQuestion;
-    // $('correct-flash').toggleClass('flash-active');
-    // $('incorrect-flash').toggleClass('flash-active');
+    Quiz.incrementQuestion();
+
 
     return Quiz.incrementCorrect(result);
   },
@@ -66,11 +67,14 @@ Template.currentQuestion.events({
     } else if(result === false){
       $('.incorrect-flash').fadeTo(1500, 1).fadeTo(1500, 0);
     }
-    // console.log(result);
-    Quiz.incrementQuestion;
-    // $('correct-flash').toggleClass('flash-active');
-    // $('incorrect-flash').toggleClass('flash-active');
+    Quiz.incrementQuestion();
+
     return Quiz.incrementCorrect(result);
+  },
+
+  "click #login-buttons-logout": function(e) {
+    e.preventDefault();
+    Router.go('/languages');
   }
 });
 

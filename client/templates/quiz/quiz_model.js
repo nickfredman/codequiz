@@ -3,44 +3,36 @@ Session.set("numberIncorrect", 0);
 
 Quiz = {
   getQuestion: function() {
+    console.log(this.currentQuiz());
     return this.currentQuiz()[this.questionIndex()];
   },
 
   totalQuestions: function() {
-    return this.currentQuiz.length;
+    return 10;
   },
 
   currentQuiz: function() {
-    return this.getOrInitializeQuiz();
-  },
-
-  getOrInitializeQuiz: function() {
-    if( !this.isQuizInitialized() ) {
-      this.initializeQuiz();
-    }
+    (Session.get("currentQuiz") || Session.set("currentQuiz", this.getQuiz()));
 
     return Session.get("currentQuiz");
   },
 
-  isQuizInitialized: function() {
-    var quiz = Session.get("currentQuiz")
-    return (Array.isArray(quiz) && quiz.length > 0);
-  },
 
-  initializeQuiz: function() {
-    Session.set("currentQuiz", this.getQuiz());
-  },
-
+// update to accept lang/level params
+// also need to change the attribute name in the collection
   getQuiz: function() {
+    //
+    //need to make this dynamic!!
+    //
     var scope = Questions.find({language: "javascript", difficulty: "easy"});
     var questions = scope.fetch();
 
     return this.getRandomSubset(questions, Session.get("totalQuizQuestions"));
   },
 
-   getRandomSubset: function(set, count) {
-     return _.first(_.shuffle(set), count);
-   },
+  getRandomSubset: function(set, count) {
+    return _.first(_.shuffle(set), count);
+  },
 
   questionIndex: function() {
     return (Session.get("questionIndex") || 0);
@@ -71,5 +63,10 @@ Quiz = {
     } else {
       Session.set("numberIncorrect", (Session.get("numberIncorrect")+1));
     }
+  },
+
+  currentPosition: function() {
+    var questionNumber = this.questionIndex() + 1;
+    return (questionNumber + " / " + this.totalQuestions());
   }
 };

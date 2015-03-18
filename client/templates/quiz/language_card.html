@@ -9,7 +9,9 @@
           <p>Level 1</p>
         </div>
       </button>
-      <button href="/quiz/{{name}}/1" id="{{name}}-2" value="{{name}} 2" class="level-button col-md-4">
+      <!-- If not logged in & clicked, open loginButtons-->
+      {{#if currentUser}}
+      <button id="{{name}}-2" value="{{name}} 2" class="level-button col-md-4">
         <div class="level2">
           <p>Level 2</p>
         </div>
@@ -19,6 +21,18 @@
           <p>Level 3</p>
         </div>
       </button>
+      {{else}}
+      <button id="{{name}}-2" value="{{name}} 2" class="level-button col-md-4 needs-login" data-toggle="tooltip" data-placement="bottom" title="Login to continue" data-animation="true">
+        <div class="level2">
+          <p>Level 2</p>
+        </div>
+      </button>
+      <button id="{{name}}-2" value="{{name}} 2" class="level-button col-md-4 needs-login" data-toggle="tooltip" data-placement="bottom" title="Login to continue" data-animation="true">
+        <div class="level3">
+          <p>Level 3</p>
+        </div>
+      </button>
+      {{/if}}
     </div>
   </div>
 </template>

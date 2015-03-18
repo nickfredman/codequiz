@@ -59,6 +59,11 @@ a:active {
     margin-bottom: 0;
 }
 
+header {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .title-blue {
     color: #31B0D5;
     text-align: left;
@@ -479,7 +484,6 @@ a:active {
 }
 
 .flash-alert {
-
     border: none;
     width: 300px;
     font-size: 3rem;
