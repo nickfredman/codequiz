@@ -18,8 +18,9 @@ Quiz = {
   getQuiz: function() {
 
     var scope = Questions.find({language: Session.get("language"), difficulty: Session.get("level")});
+    console.log(scope);
     var questions = scope.fetch();
-
+console.log(this.getRandomSubset(questions, Session.get("totalQuizQuestions")));
     return this.getRandomSubset(questions, Session.get("totalQuizQuestions"));
   },
 

@@ -1,8 +1,8 @@
 function populateCollection(collection, collectionData) {
   collectionData.forEach(function(element) {
     collection.update(element, element, { upsert: true });
-  })
-};
+  });
+}
 
 var languages = [];
 var questions = [];

@@ -1,7 +1,9 @@
 Meteor.methods({
   getQuiz: function() {
-    questions = Questions.find({language: "javascript", difficulty: "easy"}).fetch();
-    console.log( _.first(_.shuffle(questions), 10) );
-    return _.first(_.shuffle(questions, 10));
+    questions = Questions.find({
+      language: Sessiong.get("language"),
+      difficulty: Session.get("level").fetch()
+    });
+    return _.first(_.shuffle(questions, Session.get("totalQuizQuestions")));
   }
 });
