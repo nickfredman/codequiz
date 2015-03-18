@@ -6,6 +6,10 @@ Quiz = {
     return this.currentQuiz()[this.questionIndex()];
   },
 
+  totalQuestions: function() {
+    return this.currentQuiz.length;
+  },
+
   currentQuiz: function() {
     return this.getOrInitializeQuiz();
   },
@@ -31,7 +35,7 @@ Quiz = {
     var scope = Questions.find({language: "javascript", difficulty: "easy"});
     var questions = scope.fetch();
 
-    return this.getRandomSubset(questions, 10);
+    return this.getRandomSubset(questions, Session.get("totalQuizQuestions"));
   },
 
    getRandomSubset: function(set, count) {

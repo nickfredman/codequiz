@@ -3,6 +3,9 @@
     <div class="row extra-padding">
       <div class="title">
         <h1 class="lang diff main-title text-center">{{language}}: <span><em>Level {{level}}</em></span></h1>
+        <div>
+          <h1 class="pull-left"><a href="/languages" class="back-arrow glyphicon glyphicon-menu-left" aria-hidden="true"></a></h1>
+        </div>
       </div>
       <div class="progress">
         {{#if hasCorrectAnswers}}
@@ -22,7 +25,7 @@
 <template name="currentQuestion">
   <div class="well questionnaire">
     <div class="questionText">
-      <div class="current-question-mc col-md-6 col-md-offset-3">
+      <div class="current-question col-md-10 col-md-offset-1">
         <div class="mc-question-text text-center">
           <p>{{{ question.text }}}</p>
         </div>
@@ -31,6 +34,17 @@
         {{else}}
           {{> fitbQuestion}}
         {{/if}}
+      </div>
+    </div>
+    <div class="question-box-bottom text-center row">
+      <div class="help-icon">
+        <a class="glyphicon glyphicon-question-sign" aria-hidden="true" href="mailto:contact@codequiz.net"></a>
+      </div>
+      <div class="correct-flash flash-alert alert alert-success"><p>You are correct!</p>
+      </div>
+      <div class="incorrect-flash flash-alert alert alert-danger">Sorry, that's incorrect.
+      </div>
+      <div class="question-counter"><p>{{currentQuestionNumber}}</p>
       </div>
     </div>
   </div>
@@ -45,7 +59,7 @@
 </template>
 
 <template name="fitbQuestion">
-  <div class="current-question-fitb col-md-6 col-md-offset-3">
+  <div class="current-question-fitb col-md-10 col-md-offset-1">
     <div class="fitb-question-answer text-center">
       <form class="fitb-form form-inline">
         <div class="form-group">
