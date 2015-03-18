@@ -2,6 +2,38 @@ Session.set("numberCorrect", 0);
 Session.set("numberIncorrect", 0);
 
 Quiz = {
+  initializeQuiz: function(language, level) {
+    Session.set("currentQuiz", this.buildQuiz(language, level));
+  },
+
+  buildQuiz: function(language, level) {
+    var language = language;
+    var level = level;
+    var questionsCount = 0;
+
+    switch (level) {
+      case "1":
+        questionsCount = 10;
+      case "2":
+        questionsCount = 15;
+      case "3":
+        questionsCount = 20;
+    }
+
+    var scope = Questions.find({language: language, difficulty: level}).fetch();
+    var questions = this.getRandomSubset(questions, questionsCount);
+
+    var quiz = {
+      language: language,
+      level: level,
+      questionsCount: questionsCount,
+      questions: questions
+    }
+
+    console.log(quiz);
+    return quiz;
+  },
+
   getQuestion: function() {
     return this.currentQuiz()[this.questionIndex()];
   },
@@ -11,17 +43,7 @@ Quiz = {
   },
 
   currentQuiz: function() {
-    (Session.get("currentQuiz") || Session.set("currentQuiz", this.getQuiz()));
     return Session.get("currentQuiz");
-  },
-
-  getQuiz: function() {
-
-    var scope = Questions.find({language: Session.get("language"), difficulty: Session.get("level")});
-    console.log(scope);
-    var questions = scope.fetch();
-console.log(this.getRandomSubset(questions, Session.get("totalQuizQuestions")));
-    return this.getRandomSubset(questions, Session.get("totalQuizQuestions"));
   },
 
   getRandomSubset: function(set, count) {
