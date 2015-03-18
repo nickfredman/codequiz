@@ -47,20 +47,10 @@ Template.currentQuestion.events({
     return Quiz.incrementCorrect(result);
   },
 
-  "click button": function(e) {
-    e.preventDefault();
-    console.log('hi');
-    $('#final-modal').modal('show');
-  },
-
-  "click #login-buttons-logout": function(e) {
-    e.preventDefault();
-    Router.go('/languages');
-  }
+  // "click button": function(e) {
+  //   e.preventDefault();
+  //   console.log('hi');
+  //   $('#final-modal').modal('show');
+  // }
 });
 
-//  1) get an array of 10 question objects at random from main quiz collection
-//  2) ->> currentQuestion
-//  3) # in the array
-//  4) correctAnswers ++
-//  5) Incorrect = wrongAnswers.push(currentQuestion)

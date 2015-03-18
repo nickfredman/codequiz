@@ -4,7 +4,7 @@
       <p class="language">{{name}}</p> <!-- Need to color the language and the text and the top based on language, this carries over to the quiz page header -->
     </div>
     <div class="levels row">
-      <button href="/quiz/{{name}}/1" id="{{name}}-1" value="{{name}} 1" class="level-button col-md-4"> <!-- Need to pass the level parameter in the route so the quiz knows -->
+      <button id="{{name}}-1" value="{{name}} 1" class="level-button col-md-4"> <!-- Need to pass the level parameter in the route so the quiz knows -->
         <div class="level1">
           <p>Level 1</p>
         </div>
@@ -27,7 +27,7 @@
           <p>Level 2</p>
         </div>
       </button>
-      <button id="{{name}}-2" value="{{name}} 2" class="level-button col-md-4 needs-login" data-toggle="tooltip" data-placement="bottom" title="Login to continue" data-animation="true">
+      <button id="{{name}}-3" value="{{name}} 3" class="level-button col-md-4 needs-login" data-toggle="tooltip" data-placement="bottom" title="Login to continue" data-animation="true">
         <div class="">
           <p>Level 3</p>
         </div>

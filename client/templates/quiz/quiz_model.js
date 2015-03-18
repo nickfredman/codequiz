@@ -1,6 +1,7 @@
 Session.set("numberCorrect", 0);
 Session.set("numberIncorrect", 0);
 
+
 Quiz = {
   getQuestion: function() {
     return this.currentQuiz()[this.questionIndex()];
@@ -17,7 +18,10 @@ Quiz = {
 
   getQuiz: function() {
 
-    var scope = Questions.find({language: Session.get("language"), difficulty: Session.get("level")});
+    var scope = Questions.find({
+      language: Session.get("language"),
+      difficulty: Session.get("level")
+    });
     console.log(scope);
     var questions = scope.fetch();
 console.log(this.getRandomSubset(questions, Session.get("totalQuizQuestions")));
