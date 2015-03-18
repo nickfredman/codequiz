@@ -3,6 +3,7 @@ Session.set("numberIncorrect", 0);
 
 
 Quiz = {
+  //ok
   getQuestion: function() {
     return this.currentQuiz()[this.questionIndex()];
   },
@@ -16,15 +17,40 @@ Quiz = {
     return Session.get("currentQuiz");
   },
 
+  // totalQuestions: function() {
+  //   return this.currentQuiz.length;
+  // },
+
+  // currentQuiz: function() {
+  //   return this.getOrInitializeQuiz();
+  // },
+
+  // getOrInitializeQuiz: function() {
+  //   if( !this.isQuizInitialized() ) {
+  //     this.initializeQuiz();
+  //   }
+
+  //   return Session.get("currentQuiz");
+  // },
+
+  // isQuizInitialized: function() {
+  //   var quiz = Session.get("currentQuiz");
+  //   return (Array.isArray(quiz) && quiz.length > 0);
+  // },
+
+  // initializeQuiz: function() {
+  //   Session.set("currentQuiz", this.getQuiz());
+  // },
+
   getQuiz: function() {
 
     var scope = Questions.find({
-      language: Session.get("language"),
+      language: Session.get("language").toLowerCase(),
       difficulty: Session.get("level")
     });
-    console.log(scope);
+    // console.log(scope);
     var questions = scope.fetch();
-console.log(this.getRandomSubset(questions, Session.get("totalQuizQuestions")));
+// console.log(this.getRandomSubset(questions, Session.get("totalQuizQuestions")));
     return this.getRandomSubset(questions, Session.get("totalQuizQuestions"));
   },
 
