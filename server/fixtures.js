@@ -10,18 +10,18 @@ var questions = [];
 languages = [{name: "JavaScript"}, {name: "jQuery"}];
 
 questions = [{
+     text: "Which method creates an &lt;a&gt; HTML element that is used as a hypertext target?",
      correctAnswer: "anchor",
      difficulty: "easy",
      isMultipleChoice: false,
-     language: "javascript",
-     text: "Which method creates an &lt;a&gt; HTML element that is used as a hypertext target?"
+     language: "javascript"
   },{
+      text: "Which method returns the specified character from a string?",
       possibleAnswers: ["bind", "concat", "charAt", "slice"],
       correctAnswer: "charAt",
       difficulty: "easy",
       isMultipleChoice: true,
-      language: "javascript",
-      text: "Which method returns the specified character from a string?"
+      language: "javascript"
   },{
       text: "How would you combine two or <br>more strings without using + ?",
       correctAnswer: "concat",
@@ -43,7 +43,7 @@ questions = [{
       difficulty: "easy",
       language: "javascript"
   },{
-      text: "<code>var sampleArray = ['apple', 'banana', 'cherry'];\nvar finalArray = sampleArray[0] + sampleArray[1] + sampleArray[2]; </code> <br><br>What method would accomplish the above?",
+      text: "<code>var sampleArray = ['apple', 'banana', 'cherry'];<br>var finalArray = sampleArray[0] + sampleArray[1] + sampleArray[2]; </code> <br><br>What method would accomplish the above?",
       correctAnswer: "join",
       isMultipleChoice: false,
       difficulty: "easy",

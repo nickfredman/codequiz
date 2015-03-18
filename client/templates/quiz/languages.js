@@ -4,7 +4,7 @@ Template.languages.helpers({
   },
 
   upcomingLanguages: function() {
-    var data = [{name: "Underscore"}, {name: "Ruby"}, {name: "Rails"}]
+    var data = [{name: "Underscore"}, {name: "Ruby"}, {name: "Rails"}];
     return data;
   }
 });

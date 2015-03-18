@@ -1,3 +1,6 @@
+Session.set("numberCorrect", 0);
+Session.set("numberIncorrect", 0);
+
 Quiz = {
   getQuestion: function() {
     return this.currentQuiz()[this.questionIndex()];
@@ -56,5 +59,13 @@ Quiz = {
   isCorrect: function(response) {
     var correctAnswer = this.getQuestion().correctAnswer;
     return (response === correctAnswer);
+  },
+
+  incrementCorrect: function(result) {
+    if(result){
+      Session.set("numberCorrect", (Session.get("numberCorrect")+1));
+    } else {
+      Session.set("numberIncorrect", (Session.get("numberIncorrect")+1));
+    }
   }
-}
+};

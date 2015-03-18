@@ -2,13 +2,17 @@
   <div class="container-fluid quiz-page">
     <div class="row extra-padding">
       <div class="title">
-        <h1 class="lang diff main-title text-center">JavaScript: <span><em>Level 1</em></span></h1> <!--This needs to be dynamic -->
+        <h1 class="lang diff main-title text-center">{{language}}: <span><em>Level {{level}}</em></span></h1>
       </div>
       <div class="progress">
-        <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width:30%">Correct: 3 <!-- Make this dynamic -->
-        </div>
-        <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: 40%">Incorrect: 4
-        </div>
+        {{#if hasCorrectAnswers}}
+          <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: {{correctAnswers}}0%">Correct: {{correctAnswers}}
+          </div>
+        {{/if}}
+        {{#if hasIncorrectAnswers}}
+          <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: {{incorrectAnswers}}0%">Missed: {{incorrectAnswers}}
+          </div>
+        {{/if}}
       </div>
       {{> currentQuestion}}
     </div>
@@ -37,5 +41,19 @@
     {{#each answers }}
       <button value="{{this}}" class="submit mc-btn btn btn-lg btn-info">{{ this }}</button>
     {{/each}}
+  </div>
+</template>
+
+<template name="fitbQuestion">
+  <div class="current-question-fitb col-md-6 col-md-offset-3">
+    <div class="fitb-question-answer text-center">
+      <form class="fitb-form form-inline">
+        <div class="form-group">
+          <label>Answer:</label>
+          <input type="text" class="form-control" id="fitb-answer" placeholder="ex - join">
+        </div>
+        <button type="submit" class="fitb-submit fitb-btn btn btn-info">Submit</button>
+      </form>
+    </div>
   </div>
 </template>

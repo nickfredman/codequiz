@@ -11,7 +11,11 @@ body {
     width: 100%;
 }
 
-a:hover {
+
+a:hover,
+a:visited,
+a:focus,
+a:active {
     text-decoration: none;
 }
 
@@ -166,7 +170,7 @@ a:hover {
     margin-left: 230px;
     padding-top: 20px;
     color: #eee;
-    text-shadow: 1px .5px #666;
+    /*text-shadow: 1px .5px #666;*/
 
 }
 
@@ -307,14 +311,15 @@ a:hover {
     margin-bottom: 60px;
 }
 
-.levels div {
+.levels button {
     height: 35px;
     line-height: 35px;
     /*display: inline-block;*/
-    /*width: 32.925%;*/
+    width: 33.3333%;
     margin: 0;
     padding: 0;
     border-radius: 0 0 5px 5px;
+    border: none;
     border-bottom: 1px solid rgba(179, 179, 179, .5);
     text-align: center;
     color: #fff;
@@ -329,10 +334,6 @@ a:hover {
 
 .levels p {
     margin: 0;
-}
-
-.levels a {
-    padding: 0;
 }
 
 .level1 {

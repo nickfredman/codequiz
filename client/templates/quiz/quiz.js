@@ -1,3 +1,27 @@
+Template.quiz.helpers({
+  language: function() {
+    return Session.get("language");
+  },
+  level: function() {
+    return Session.get("level");
+  },
+  questionNumber: function() {
+    return Session.get("questionIndex");
+  },
+  correctAnswers: function() {
+    return Session.get("numberCorrect");
+  },
+  incorrectAnswers: function() {
+    return Session.get("numberIncorrect");
+  },
+  hasCorrectAnswers: function() {
+    return Session.get("numberCorrect") > 0;
+  },
+  hasIncorrectAnswers: function() {
+    return Session.get("numberIncorrect") > 0;
+  }
+});
+
 Template.currentQuestion.helpers({
   question: function() {
     return Quiz.getQuestion();
@@ -11,8 +35,8 @@ Template.currentQuestion.events({
     var result = Quiz.isCorrect(response);
     console.log(result);
     Quiz.incrementQuestion();
-    
-    return result;
+
+    return Quiz.incrementCorrect(result);
   },
 
   "submit .fitb-form": function(e) {
@@ -22,7 +46,7 @@ Template.currentQuestion.events({
     console.log(result);
     Quiz.incrementQuestion();
 
-    return Quiz.isCorrect(response);
+    return Quiz.incrementCorrect(result);
   }
 });
 
