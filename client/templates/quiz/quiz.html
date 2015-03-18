@@ -6,11 +6,11 @@
       </div>
       <div class="progress">
         {{#if hasCorrectAnswers}}
-          <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: {{correctAnswers}}0%">Correct: {{correctAnswers}}
+          <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" style="width: {{correctAnswers}}0%"><!-- Correct:  -->{{correctAnswers}}
           </div>
         {{/if}}
         {{#if hasIncorrectAnswers}}
-          <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: {{incorrectAnswers}}0%">Missed: {{incorrectAnswers}}
+          <div class="progress-bar progress-bar-danger progress-bar-striped active" role="progressbar" style="width: {{incorrectAnswers}}0%"><!-- Missed: -->{{incorrectAnswers}}
           </div>
         {{/if}}
       </div>
