@@ -30,6 +30,7 @@ Template.quiz.helpers({
 
 Template.currentQuestion.helpers({
   question: function() {
+    console.log(Quiz.getQuestion());
     return Quiz.getQuestion();
   },
 

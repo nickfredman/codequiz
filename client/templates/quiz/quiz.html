@@ -23,7 +23,10 @@
 </template>
 
 <template name="currentQuestion">
-  <div class="well questionnaire">
+  {{#if outOfQuestions}}
+  {{> finalModal}}
+  {{else}}
+    <div class="well questionnaire">
     <div class="questionText">
       <div class="current-question col-md-10 col-md-offset-1">
         <div class="mc-question-text text-center">
@@ -48,6 +51,7 @@
       </div>
     </div>
   </div>
+  {{/if}}
 </template>
 
 <template name="mcQuestion">

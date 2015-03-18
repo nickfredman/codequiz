@@ -7,16 +7,13 @@ Quiz = {
   },
 
   totalQuestions: function() {
-    return 10;
+    return Session.get("totalQuizQuestions");
   },
 
   currentQuiz: function() {
     (Session.get("currentQuiz") || Session.set("currentQuiz", this.getQuiz()));
-
     return Session.get("currentQuiz");
   },
-
-
 
   getQuiz: function() {
 
