@@ -17,31 +17,6 @@ Quiz = {
     return Session.get("currentQuiz");
   },
 
-  // totalQuestions: function() {
-  //   return this.currentQuiz.length;
-  // },
-
-  // currentQuiz: function() {
-  //   return this.getOrInitializeQuiz();
-  // },
-
-  // getOrInitializeQuiz: function() {
-  //   if( !this.isQuizInitialized() ) {
-  //     this.initializeQuiz();
-  //   }
-
-  //   return Session.get("currentQuiz");
-  // },
-
-  // isQuizInitialized: function() {
-  //   var quiz = Session.get("currentQuiz");
-  //   return (Array.isArray(quiz) && quiz.length > 0);
-  // },
-
-  // initializeQuiz: function() {
-  //   Session.set("currentQuiz", this.getQuiz());
-  // },
-
   getQuiz: function() {
 
     var scope = Questions.find({

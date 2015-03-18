@@ -27,10 +27,14 @@ Template.currentQuestion.events({
     } else if(result === false){
       $('.incorrect-flash').fadeTo(1500, 1).fadeTo(1500, 0);
     }
-    Quiz.incrementQuestion();
+    if(Quiz.questionsRemain()){
+      Quiz.incrementQuestion();
+      return Quiz.incrementCorrect(result);
+    } else {
+      $('#final-modal').modal('show');
+    }
 
 
-    return Quiz.incrementCorrect(result);
   },
 
   "submit .fitb-form": function(e) {
@@ -42,9 +46,12 @@ Template.currentQuestion.events({
     } else if(result === false){
       $('.incorrect-flash').fadeTo(1500, 1).fadeTo(1500, 0);
     }
-    Quiz.incrementQuestion();
-
-    return Quiz.incrementCorrect(result);
+    if(Quiz.questionsRemain()){
+      Quiz.incrementQuestion();
+      return Quiz.incrementCorrect(result);
+    } else {
+      $('#final-modal').modal('show');
+    }
   },
 
   // "click button": function(e) {
