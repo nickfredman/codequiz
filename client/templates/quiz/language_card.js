@@ -22,7 +22,7 @@ Template.languageCard.events({
       Session.set("totalQuizQuestions", 20);
     }
 
-    if(Session.get("level") == "1") {
+    if(Session.get("level") === "1") {
       Router.go("/quiz");
     } else {
       if (Meteor.user()) {

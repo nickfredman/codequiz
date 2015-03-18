@@ -3,7 +3,6 @@ Session.set("numberIncorrect", 0);
 
 Quiz = {
   getQuestion: function() {
-    console.log(this.currentQuiz());
     return this.currentQuiz()[this.questionIndex()];
   },
 
@@ -18,13 +17,10 @@ Quiz = {
   },
 
 
-// update to accept lang/level params
-// also need to change the attribute name in the collection
+
   getQuiz: function() {
-    //
-    //need to make this dynamic!!
-    //
-    var scope = Questions.find({language: "javascript", difficulty: "easy"});
+
+    var scope = Questions.find({language: Session.get("language"), difficulty: Session.get("level")});
     var questions = scope.fetch();
 
     return this.getRandomSubset(questions, Session.get("totalQuizQuestions"));
@@ -67,6 +63,6 @@ Quiz = {
 
   currentPosition: function() {
     var questionNumber = this.questionIndex() + 1;
-    return (questionNumber + " / " + this.totalQuestions());
+    return (questionNumber + " / " + Session.get("totalQuizQuestions"));
   }
 };

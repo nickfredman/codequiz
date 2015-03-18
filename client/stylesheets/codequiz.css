@@ -499,13 +499,14 @@ header {
 .question-counter {
     position: absolute;
     right: 10px;
-    width: 100px;
+    width: 120px;
     padding: 0;
 }
 
 .question-counter p {
     padding: 0;
     margin: 0;
+    font-size:3rem;
 }
 
 
@@ -539,12 +540,24 @@ header {
 }
 
 .fitb-question-answer label {
+    margin: 0;
     margin-right: 10px;
     font-weight: bold;
+    font-size: 3.5rem;
+    vertical-align: bottom;
+}
+#fitb-answer {
+    height: 50px;
+    line-height: 50px;
+    font-size: 3.5rem;
 }
 
 .form-inline button {
     margin-left: 10px;
+    vertical-align: bottom;
+    height: 50px;
+    line-height: 36px;
+    font-size: 3rem;
 }
 
 .modal-content {
