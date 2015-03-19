@@ -408,7 +408,6 @@ header {
 }
 
 .modal-body a {
-    width: 25%;
     margin-left: 6px;
     margin-right: 6px;
 }
@@ -499,14 +498,14 @@ header {
 
 .flash-alert {
     border: none;
-    width: 300px;
-    font-size: 3rem;
+    /*width: 300px;*/
+    font-size: 3.5rem;
     height: 50px;
     line-height: 50px;
     vertical-align: bottom;
     margin-bottom: 0;
     text-align: center;
-    font-style: italic;
+    font-weight: bold;
     opacity: 0;
 }
 
@@ -587,7 +586,7 @@ header {
     color: #555;
 }
 
-.modal-body .btn-good {
+/*.modal-body .btn-good {
     color: #fff;
     background-color: #5cb85c;
     border-color: #4cae4c;
@@ -597,7 +596,7 @@ header {
     color: #fff;
     background-color: #d9534f;
     border-color: #d43f3a;
-}
+}*/
 
 .modal-dialog {
     top: 25%;
