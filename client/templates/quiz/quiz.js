@@ -1,3 +1,9 @@
+Template.quiz.rendered = function() {
+  Session.set("numberCorrect", 0);
+  Session.set("numberIncorrect", 0);
+  Session.set("questionIndex", 0);
+};
+
 Template.quiz.helpers({
   language: function() {
     return Session.get("language");
